@@ -1,6 +1,5 @@
 package com.servicenow.app.respository;
 
-import com.servicenow.app.entity.TestTable;
 import com.servicenow.app.entity.Ticket;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

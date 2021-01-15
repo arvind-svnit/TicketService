@@ -1,6 +1,5 @@
 package com.servicenow.app.respository;
 
-import com.servicenow.app.entity.TestTable;
 import com.servicenow.app.entity.User;
 import com.servicenow.app.enums.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
