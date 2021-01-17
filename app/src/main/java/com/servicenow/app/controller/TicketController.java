@@ -33,9 +33,9 @@ public class TicketController {
         return ticketService.createTicket(ticketRequestDto);
     }
 
-    @RequestMapping(value = "{id}", method = RequestMethod.POST)
-    public Ticket resolveTicket(@PathVariable(value = "id") Long id, @RequestBody String response){
-        return ticketService.resolveTicket(id, response);
+    @RequestMapping(value = "{id}/resolveTicket", method = RequestMethod.POST)
+    public Ticket resolveTicket(@PathVariable(value = "id") Long id, @RequestBody String comment){
+        return ticketService.resolveTicket(id, comment);
     }
 
     @PutMapping("{id}")
@@ -43,7 +43,7 @@ public class TicketController {
         return ticketService.closeTicket(id);
     }
 
-    @RequestMapping(value = "{id}", method = RequestMethod.PATCH)
+    @RequestMapping(value = "{id}/sendFeedBack", method = RequestMethod.POST)
     public Ticket sendFeedBack(@PathVariable(value = "id") Long id, @RequestBody String feedBack){
         return ticketService.sendFeedBack(id, feedBack);
     }

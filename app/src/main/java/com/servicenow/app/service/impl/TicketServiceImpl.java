@@ -77,4 +77,12 @@ public class TicketServiceImpl implements TicketService {
         ticket.setResponse(responseBuffer.toString());
         return ticketRepository.save(ticket);
     }
+
+    public void setTicketRepository(TicketRepository ticketRepository) {
+        this.ticketRepository = ticketRepository;
+    }
+
+    public void setAgentRepository(AgentRepository agentRepository) {
+        this.agentRepository = agentRepository;
+    }
 }
